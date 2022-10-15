@@ -6,6 +6,7 @@ import Link from 'next/link'
 import gardenImage from './assets/images/garden.png'
 import logo from './assets/images/BB.png'
 import Main from './Main'
+import Cards from './Cards'
 import Navbar from './Navbar'
 
 export default function Home() {
@@ -76,8 +77,8 @@ export default function Home() {
         <Link href="/register" className="text-lg text-black">Register</Link>
       </div>
 
-      <Main/>
-      
+      {/* <Main/> */}
+      <Cards/>
     </div>
   )
 }
