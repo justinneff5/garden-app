@@ -5,6 +5,8 @@ import plantImage from './assets/images/plant.png'
 import Link from 'next/link'
 import gardenImage from './assets/images/garden.png'
 import logo from './assets/images/BB.png'
+import Main from './Main'
+import Navbar from './Navbar'
 
 export default function Home() {
 
@@ -33,7 +35,7 @@ export default function Home() {
             width="300px"
             height="300px"
           />
-        </div>
+        </div>s
         <div className={styles.brandName}>
           BACKYARD BABYLON
         </div>
@@ -69,10 +71,13 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.about}></div>
-      <Image src={plantImage} alt = "nothing!"></Image>
+      {/* <Image src={plantImage} alt = "nothing!"></Image> */}
       <div className={styles.more}>
         <Link href="/register" className="text-lg text-black">Register</Link>
       </div>
+
+      <Main/>
+      
     </div>
   )
 }

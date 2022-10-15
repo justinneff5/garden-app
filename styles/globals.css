@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+/* html,
 body {
   padding: 0;
   margin: 0;
@@ -17,8 +17,36 @@ a {
 
 * {
   box-sizing: border-box;
-}
+} */
 
+
+ @layer base {
+  body{
+    @apply bg-[#fafafa] text-[#003840] tracking-wide
+  }
+
+  h1, h2, h3, h4, h5, h6{
+    @apply font-bold
+  }
+
+  h1{
+    @apply text-4xl sm:text-5xl
+  }
+
+  h2{
+    @apply text-3xl sm:text-4xl
+  }
+
+  li{
+    @apply cursor-pointer
+  }
+
+  button{
+    @apply shadow-xl shadow-green-500 rounded-xl bg-gradient-to-r from-[#097200] to-[#064400] text-white
+  }
+} 
+
+/* 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -27,4 +55,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */
