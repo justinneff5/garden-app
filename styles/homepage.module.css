@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;600;700&family=Roboto+Condensed:wght@300;700&display=swap');
-    /* --mainGreen: #02A676;
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Raleway:wght@100;200;300;400;600;700&family=Roboto+Condensed:wght@300;700&display=swap');
+/* --mainGreen: #02A676;
     --bgGreen: #007369;
     --darkGreen: #003840; */
 /*
@@ -16,26 +16,24 @@
 }
 
 .headerBar {
-    position: absolute;
-    top: 0;
-    display: flex;
-    height: 5em;
+    position: static;
+    top: 1em;
     width: 100%;
-    padding-inline: 0em;
-    padding-top: 0.5em;
-    margin-left: 1em;
+    height: 3em;
+    background-color: #02A676;
 }
 
-.title {
-    color: #003840;
-    font-size: large;
+.tabContainer {
+    padding-top: 0.5em;
+    position: relative;
     display: flex;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    margin-left: 32em;
+    width: 80%;
 }
 
 .tab {
-    color:#003840;
+    position: relative;
+    color: #e4f9eb;
     padding-top: 0.15em;
     width: auto;
     padding-left: 1em;
@@ -50,6 +48,7 @@
     position: absolute;
     right: 2.5em;
     padding-left: 1em;
+    width: 10%;
     text-align: center;
     font-weight: 300;
 }
@@ -59,12 +58,98 @@
     color: rgb(42, 70, 57);
 }
 
-.about {
-    height: 50%;
-    background-color: white;
+.logoContainer {
+    color: #e4f9eb;
+    background-color:#02A676;
+    width: 100%;
+    height: auto;
 }
 
-.more {
-    height: 50%;
-    background-color: #02A676;
+.logoContainer .logo {
+    width: 30%;
+    padding-left: 3em;
 }
+
+.logoContainer .brandName {
+    position: absolute;
+    top: 2em;
+    left: 4.5em;
+    width: 70%;
+    font-size: 70pt;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+}
+
+.aboutContainer {
+    height: auto;
+    background-color: white;
+    color: #003840;
+}
+
+.moreContainer {
+    height: auto;
+    background-color: #007369;
+    color: #d4f3f1;
+}
+
+.infoHeader {
+    width: 35%;
+    font-size: 20pt;
+    font-weight: 600;
+    margin: auto;
+    margin-top: 3em;
+    font-family: 'Lora', serif;
+}
+
+.whyHeader {
+    padding-top: 2em;
+}
+
+.infoBody {
+    width: 50%;
+    font-size: 15pt;
+    font-weight: 300;
+}
+
+.aboutBody {
+    margin-left: 25em;
+    padding-top: 2em;
+}
+
+.whyBody {
+    width: 80%;
+    margin: auto;
+    margin-top: 2em;
+    padding-bottom: 5em;
+}
+
+.gardenImage {
+    position: absolute;
+    top: 25em;
+    left: 3em;
+}
+
+.rainGardenButton {
+    position: relative;
+    /* right: 44em;
+    top: 25em; */
+    border-radius: 15px;
+    background: #02A676;
+    color: white;
+    width: 15em;
+    margin: auto;
+    margin-top: 2em;
+    text-align: center;
+    height: 3em;
+}
+
+.rainGardenButton p {
+    padding-top: 0.7em;
+    font-weight: 600;
+}
+
+.rainGardenButton:hover {
+    background: #028e64;
+    cursor: pointer;
+}
+
