@@ -11,13 +11,13 @@ import { ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn
 
 export default function Figures(props) {
 
-    const SlideLeft = MoveIn(-100, 0);
+    const SlideLeft = MoveIn(-1000, 0);
 
     return (
-        <div>
-            <ScrollPage>
-                <Animator animation={SlideLeft}>
-                    <section class="text-gray-600 font-['Georgia'] bg-primary">
+        <ScrollContainer>
+            {/* <ScrollPage page={0}>
+                <Animator animation={SlideLeft}> */}
+                    <section class="text-gray-600 font-['Georgia'] bg-primary shadow-[0_0_100px_rgba(0,0,0,0.3)_inset]">
                         <div class="container px-5 py-24 mx-auto flex flex-wrap">
                             <div class="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
                             <div class="w-full sm:p-4 px-4 mb-6">
@@ -38,14 +38,14 @@ export default function Figures(props) {
                             </div>
                         </div>
                     </section>
-                </Animator>
+                {/* </Animator>
             </ScrollPage>
-            <ScrollPage>
-                <Animator animation={SlideLeft}>
-                    <section class="text-textDark font-['Georgia'] bg-white">
+            <ScrollPage page={1}>
+                <Animator animation={SlideLeft}> */}
+                    <section class="text-textDark font-['Georgia'] bg-[#EDFFFD] shadow-[0_0_100px_rgba(0,0,0,0.3)_inset]">
                         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
                             <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                                <img class="object-cover object-center rounded" alt="hero" src="https://www.flooddefenders.org/hubfs/Flood-Defenders-2020/Flood_Risk02.png"/>
+                                <img class="object-cover object-center rounded-lg" alt="hero" src="https://www.flooddefenders.org/hubfs/Flood-Defenders-2020/Flood_Risk02.png"/>
                                 <div class="relative ml-8 mt-8">Number of properties at substantial flood risk by county in 2020.</div>
                             </div>
                             <div class="ml-20 md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
@@ -63,9 +63,9 @@ export default function Figures(props) {
                             </div>
                         </div>
                     </section>
-                </Animator>
-            </ScrollPage>
-        </div>
+                {/* </Animator>
+            </ScrollPage> */}
+        </ScrollContainer>
     );
 
     // //
