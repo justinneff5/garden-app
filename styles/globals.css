@@ -40,10 +40,6 @@ a {
   li{
     @apply cursor-pointer
   }
-
-  button{
-    @apply shadow-xl shadow-green-500 rounded-xl bg-gradient-to-r from-[#097200] to-[#064400] text-white
-  }
 } 
 
 /* 

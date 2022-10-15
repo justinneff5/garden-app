@@ -101,8 +101,8 @@ export default function Cards() {
             </div>
 
             <div class="grid grid-col-4 grid-flow-col gap-4 justify-between">
-                <div class="col-span-1">
-                    <div className="w-[250px] h-[250px] bg-transparent cursor-pointer group prespective">
+                <div class="col-span-1 ">
+                    <div className="w-[250px] h-[250px] bg-transparent cursor-pointer group prespective translate-x-2">
                         <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-700">
                             <div className="absolute backface-hidden border-2 w-full h-full text-center">
                                 <Image src={waterPollution} className='rounded-lg'/>

@@ -8,6 +8,7 @@ import logo from './assets/images/BB.png'
 import Main from './Main'
 import Cards from './Cards'
 import Navbar from './Navbar'
+import Calculator from './Calculator'
 
 export default function Home() {
 
@@ -78,7 +79,9 @@ export default function Home() {
       </div>
 
       {/* <Main/> */}
-      <Cards/>
+      {/* <Cards/>
+       */}
+       <Calculator/>
     </div>
   )
 }
