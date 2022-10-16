@@ -19,7 +19,7 @@ const Myclass = plugin(function({addUtilities}){
 
     ".backface-hidden":{
       backfaceVisibility: "hidden"
-    }
+    },
   });
 });
 
@@ -71,6 +71,6 @@ module.exports = {
         backdropLight: '#EDFFFD',
       }
     },
-    plugins: [Myclass],
-  }
+  },
+  plugins: [Myclass],
 }

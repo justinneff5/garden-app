@@ -25,9 +25,16 @@ export default function Recommendations() {
         if (deep_copy.length > 0) setActivePlantIndex(0);
     }
 
+    function nextPlant() {
+        setActivePlantIndex(activePlantIndex + 1);
+    }
+    function prevPlant() {
+        setActivePlantIndex(activePlantIndex - 1);
+    }
+
 
     return (
-        <div className='w-3/4 mt-10 mb-10 h-auto m-auto justify-center items-center bg-white rounded-3xl p-14 shadow-2xl'>
+        <div className='w-3/4 mt-10 h-auto m-auto justify-center items-center bg-white rounded-3xl p-14 shadow-2xl'>
             <form>
                 <div className='text-black w-auto'>
                     <h2 className='pb-5 w-4/5 m-auto'>Sun Exposure</h2>
@@ -90,8 +97,10 @@ export default function Recommendations() {
 
 
             {ran && deep_copy.length != 0 ? (
-                <div className="h-auto w-auto">
-                    <RecommendedPlantCard localPlant={deep_copy[activePlantIndex]}/>
+                <div className="h-full w-full flex">
+                    <button onClick={() => prevPlant()} className="w-12 h-12 bg-red-500 mr-4" disabled={ activePlantIndex <= 0}>Back</button>
+                    <RecommendedPlantCard localPlant={deep_copy[activePlantIndex]} />
+                    <button onClick={() => nextPlant()} className="w-12 h-12 bg-green-500 ml-4" disabled={ activePlantIndex >= (deep_copy.length - 1)}>Forward</button>
                 </div>
             ) : (<div></div>)}
 
