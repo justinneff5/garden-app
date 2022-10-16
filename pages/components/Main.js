@@ -18,6 +18,10 @@ export default function Main(props) {
                        <Link href='/calculatePage'>
                         <button class="inline-flex text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primaryDark rounded text-lg">Build your rain garden</button>
                        </Link>
+
+                       <Link href='/plantid'>
+                        <button class="inline-flex ml-5 text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primaryDark rounded text-lg">Check your plants</button>
+                       </Link>
                     </div>
                 </div>
             </div>
