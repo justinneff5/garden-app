@@ -17,8 +17,6 @@ export async function getStaticProps(context) {
     let dimensions = { x: 4, y: 4 };
     let res = await axios.get(process.env.API + 'plants/getplants');
     let localPlants = res.data.body;
-    console.log('planty');
-    console.log(localPlants);
     const data = {localPlants: localPlants, dimensions: dimensions};
     return { props: { data } };
 }

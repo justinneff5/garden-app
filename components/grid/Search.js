@@ -42,7 +42,7 @@ function Search(props) {
         let temp = [];
         let i = 0;
         props.localPlants.forEach((plant) => {
-            temp.push(<div key={i} className="w-2/3 h-16 my-0.5">
+            temp.push(<div key={i} className="w-auto h-20 my-0.5 mx-4">
                 <PlantSearchElement localPlant={plant} />
             </div>);
             i++;
@@ -68,7 +68,7 @@ function Search(props) {
                 <div className="ml-12 h-full text-sm w-auto text-right mr-6 mb-4">{searchHelp}</div>
             </div>
             
-            <div className="ml-12 h-full w-auto overflow-y-auto pt-4 pb-32">
+            <div className="ml-6 h-full w-auto mr-6 overflow-x-hidden overscroll-none overflow-y-auto pt-4 pb-32">
                 {searched ? 
                     filtered().map(x => x) : unfiltered().map(x => x)}
             </div>

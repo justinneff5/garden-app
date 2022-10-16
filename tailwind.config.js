@@ -57,6 +57,10 @@ module.exports = {
         innerShadow: '0 0 100px rgba(0,0,0,0.3) inset',
         innerLess: '0 0 25px rgba(0,0,0,0.3) inset',
       },
+      scale: {
+        102: "102%",
+        200: "200%"
+      },
       colors: {
         primary: '#02A676',
         primaryDark: '#008c72',
