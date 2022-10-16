@@ -7,12 +7,6 @@
     font-family: 'Roboto Condensed', sans-serif;
 */
 
-@keyframes rotate {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
 .body {
     background-color: white;
     width: 100%;
