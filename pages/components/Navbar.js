@@ -40,9 +40,9 @@ export default function Navbar(props) {
                         <a href="#" onClick={(e)=>{handleClick('plantid')}} class={selected === 'plantid' ? ("block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white") : ("block py-2 pr-4 pl-3 text-primary rounded hover:text-green-200 md:hover:bg-transparent md:border-0  md:p-0 md: dark:hover:bg-gray-700  md:dark:hover:bg-transparent")}>Plant Info Search</a>
                         </li>
                         </Link>
-                        <Link href="#">
+                        <Link href="/garden">
                             <li>
-                            <a href="#" onClick={(e)=>{handleClick('grid')}} class={selected === 'grid' ? ("block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white") : ("block py-2 pr-4 pl-3 text-primary rounded hover:text-green-200 md:hover:bg-transparent md:border-0  md:p-0 md: dark:hover:bg-gray-700  md:dark:hover:bg-transparent")}>Make A Layout</a>
+                            <a href="#" onClick={(e)=>{handleClick('grid')}} class={selected === 'grid' ? ("block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white") : ("block py-2 pr-4 pl-3 text-primary rounded hover:text-green-200 md:hover:bg-transparent md:border-0  md:p-0 md: dark:hover:bg-gray-700  md:dark:hover:bg-transparent")}>Design Your Garden</a>
                             </li>
                         </Link>
                     

@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 const model_name = 'Garden';
 const { Schema } = mongoose;
-import PlantIF from '../lib/plant';
 
 const gardenSchema = new Schema({
     user: {
@@ -13,10 +12,20 @@ const gardenSchema = new Schema({
     rows: {
         type: Number
     },
-    plants: {
-        //i is the gridbox ind for location
-        type: [{ PlantIF }],
-        default: []
+    // plants: {
+    //     //i is the gridbox ind for location
+    //     type: [{
+    //         idx: Number,
+    //         name: String,
+    //         image_link: String,
+    //         moisture: String,
+    //         exposure: String
+    //     }],
+    //     default: []
+    // }
+    image_links: {
+        type: [String],
+        default: [''] * 16
     }
     
 });

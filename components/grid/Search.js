@@ -25,6 +25,7 @@ function Search(props) {
         props.setLink(plant.image_link);
         props.setMoisture(plant.moisture);
         props.setExposure(plant.exposure);
+        setSearchHelp('Select a square of dirt to plant your ' + plant.name + '!')
     }
 
     function filtered() {
@@ -66,22 +67,21 @@ function Search(props) {
     }
 
     return (
-        <div className="h-full w-full ml-4 relative z-20 text-black bg-gray-100 overflow-hidden">
+        <div className="h-full w-full ml-4 relative z-20 text-black bg-gray-100 overflow-hidden rounded-md drop-shadow-2xl">
             {/* <button onClick={() => search(e.target.value)} className="w-20 h-20 bg-gray-400"> click to load plant</button> */}
             <div className="m-2">
-                <form className="flex sticky">
-                    <input placeholder="Enter plant name" type="text" value={currSearch} className="border-2 border-green-500 pl-2 rounded-md w-48 h-10 ml-6 mt-8 text-black bg-gray-100" onChange={(e) => setCurrSearch(e.target.value)} />
-                    <button type="submit" onClick={(e) => search(e)} className="w-20 rounded-md h-10 mt-8 ml-4 bg-green-300">Search</button>
-                    <button onClick={ (e) => clearSearch(e)} className="w-16 h-10 rounded-md mt-8 ml-4 mr-6 bg-green-400">Clear</button>
+                <form className="flex sticky justify-between px-2">
+                    <input placeholder="Enter plant name" type="text" value={currSearch} className="border-2 border-green-500 pl-2 rounded-md w-64 h-10 ml-7 mt-8 text-black bg-gray-100" onChange={(e) => setCurrSearch(e.target.value)} />
+                    <button type="submit" onClick={(e) => search(e)} className="w-32 rounded-md h-10 mt-8 ml-4 mr-4 bg-green-300">Search</button>
                 </form>
-                <div className="ml-12 h-full text-sm w-auto text-right mr-6 mb-4">{searchHelp}</div>
+                <div className="ml-10 mt-1 h-full text-sm w-auto text-left mr-8">{searchHelp}</div>
             </div>
             
             <div className="ml-6 h-full w-auto mr-6 overflow-x-hidden overscroll-none overflow-y-auto pt-4 pb-32">
                 {searched ? 
                     filtered().map(x => x) : unfiltered().map(x => x)}
             </div>
-            <div className="h-20 w-full"></div>
+            <div className="h-20 w-full bg-green-300"></div>
         </div>
     )
 }
