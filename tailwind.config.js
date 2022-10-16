@@ -33,13 +33,18 @@ module.exports = {
 
     },
     extend: {
+      boxShadow: {
+        innerShadow: '0 0 100px rgba(0,0,0,0.3) inset',
+        innerLess: '0 0 25px rgba(0,0,0,0.3) inset',
+      },
       colors: {
         primary: '#02A676',
         primaryDark: '#008c72',
         secondary: '#007369',
         secondaryDark: '#005a5b',
         textDark: '#003840',
-        textLight: '#E3FEE8'
+        textLight: '#E3FEE8',
+        backdropLight: '#EDFFFD',
       }
     },
   },

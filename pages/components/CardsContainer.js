@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import waterPollution from "./assets/images/wpollution.jpeg"
-import flood from "./assets/images/floodControl.jpeg"
-import protectWater from "./assets/images/protectWater.png"
-import climate from "./assets/images/climate.jpeg"
-import saveMoney from "./assets/images/saveMoney.webp"
+import waterPollution from "../assets/images/wpollution.jpeg"
+import flood from "../assets/images/floodControl.jpeg"
+import protectWater from "../assets/images/protectWater.png"
+import climate from "../assets/images/climate.jpeg"
+import saveMoney from "../assets/images/saveMoney.webp"
 import Card from "./Card";
-import hood from "./assets/images/hood.jpeg"
-import coolAir from "./assets/images/cool-air.jpeg"
-import habitat from "./assets/images/habitat.jpeg"
+import hood from "../assets/images/hood.jpeg"
+import coolAir from "../assets/images/cool-air.jpeg"
+import habitat from "../assets/images/habitat.jpeg"
 
 export default function CardsContainer(props) {
     const display = props.display === 1
