@@ -6,7 +6,6 @@ const Myclass = plugin(function({addUtilities}){
   addUtilities({
     ".my-rotate-y-180":{
       transform: "rotateY(180deg)",
-
     },
 
     ".preserve-3d":{
@@ -71,6 +70,6 @@ module.exports = {
         backdropLight: '#EDFFFD',
       }
     },
+  },
     plugins: [Myclass],
-  }
 }

@@ -12,7 +12,8 @@ export default function Main(props) {
                 <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
                     <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">What is a rain garden?
                     </h1>
-                    <p class="mb-8 leading-relaxed">A rain garden is not your regular garden with pretty looking flowers and other plants. Rain garden is much more than that, it serves as a way for water to be absorbed into the ground. The garden allows for the excess water to seep into the ground and not go to the nearest drain system. Rain gardens have been effective in allowing 30% more water into the ground and decreasing the chance of flooding.</p>
+                    <p class="mb-8 leading-relaxed">Rain gardens are designed to capture rain water and prevent the rapid release of excess stormwater into municipal water systems. Well designed rain gardens are well known to reduce runoff and flooding, and filter pollutants carried in stormwater runoff. Along with the municipal benefits and the conservation of water as a valuable natural resource, rain gardens create excellent habitats for birds and butterflies. Anyone can create a rain garden in their backyard, as rain gardens are typically low cost, low maintenance, and don’t require a lot of space. 
+</p>
                     <div class="flex justify-center">
                        <Link href='/calculatePage'>
                         <button class="inline-flex text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primaryDark rounded text-lg">Build your rain garden</button>
