@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useState } from 'react';
 import axios from 'axios';
 import RecommendedPlantCard from './RecommendedPlantCard';
+import plantImage from '../assets/images/BB.png'
 
 let deep_copy = [];
 export default function Recommendations() {
@@ -34,9 +35,12 @@ export default function Recommendations() {
 
 
     return (
-        <div className='w-3/4 mt-10 h-auto m-auto justify-center items-center bg-white rounded-3xl p-14 shadow-2xl'>
+        <div className='w-3/4 mt-10 m-auto justify-center items-center bg-white rounded-3xl p-5 shadow-2xl'>
             <form>
-                <div className='text-black w-auto'>
+                <div className='text-textDark w-auto'>
+                    <div className='text-center py-5 first-letter:relative text-textDark font-semibold text-xl'>
+                        Get Plant Recommendations
+                    </div>
                     <h2 className='pb-5 w-4/5 m-auto'>Sun Exposure</h2>
                     <ul class="items-center w-4/5 m-auto text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                         <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
@@ -91,16 +95,27 @@ export default function Recommendations() {
                             Get Recommendations
                         </button>
                     </div>
-                        
+
                 </div>
             </form>
 
 
             {ran && deep_copy.length != 0 ? (
-                <div className="h-full w-full flex">
-                    <button onClick={() => prevPlant()} className="w-12 h-12 bg-red-500 mr-4" disabled={ activePlantIndex <= 0}>Back</button>
-                    <RecommendedPlantCard localPlant={deep_copy[activePlantIndex]} />
-                    <button onClick={() => nextPlant()} className="w-12 h-12 bg-green-500 ml-4" disabled={ activePlantIndex >= (deep_copy.length - 1)}>Forward</button>
+                <div className="w-3/4 m-auto flex flex-col justify-center items-center">
+                        {deep_copy.map((plant, i) => {return (
+                        
+                        <RecommendedPlantCard
+                            name={plant.name}
+                            comments={plant.comments}
+                            exposure={plant.exposure}
+                            bloom={plant.bloom}
+                            moisture={plant.moisture}
+                            maturity={plant.mature_size}
+                            img={plant.image_link}
+                            localPlant={deep_copy[i]} 
+                        />)})}
+                    
+
                 </div>
             ) : (<div></div>)}
 

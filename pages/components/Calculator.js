@@ -158,10 +158,10 @@ export default function Calculator() {
   }
 
   return (
-    <div>
+    <div className="w-4/5 m-auto">
       <div className="font-light text-textDark w-full h-auto">
         <div class="grid grid-col-4 m-auto grid-flow-col gap-4 pb-10 justify-center ml-20 mr-20">
-          <div class="shadow-innerShadow col-span-2 m-auto h-auto bg-backdropLight mr-10 rounded-md">
+          <div class="shadow-lg col-span-2 m-auto h-auto bg-[#fafafa] mr-10 rounded-3xl">
             <div className="">
               <h3 className="text-center p-5 text-xl">
                 <span className="underline  font-bold">Step 1</span>: Measure
@@ -190,7 +190,7 @@ export default function Calculator() {
                   type="text"
                   id="totLength"
                   name="totLength"
-                  className="form-control bg-white h-8 w-14 ml-2 mr-2 float-right rounded-lg p-4"
+                  className="form-control bg-blue-400 text-white h-8 w-14 ml-2 mr-2 float-right rounded-lg p-2"
                 />
               </div>
               <div class="input-group input-group-outline pt-5 flex float-left items-center pb-5">
@@ -202,13 +202,13 @@ export default function Calculator() {
                   id="totWidth"
                   name="totWidth"
                   class="form-control"
-                  className="w-14 bg-white h-8 rounded-lg p-2"
+                  className="w-14 bg-blue-400 text-white h-8 rounded-lg p-2"
                 />
               </div>
             </div>
           </div>
 
-          <div class="shadow-innerShadow col-span-2 h-auto   bg-backdropLight ml-10 rounded-md drop-shadow-lg">
+          <div class="shadow-lg col-span-2 h-auto   bg-[#fafafa] ml-10 rounded-3xl drop-shadow-lg">
             <div className="">
               <h3 className="text-center p-5 text-xl">
                 <span className="underline  font-bold">Step 2</span>: Identify
@@ -237,11 +237,11 @@ export default function Calculator() {
                   id="rainfall"
                   name="rainfall"
                   class="form-control"
-                  className="w-14 bg-white h-8 mr-2 float-right rounded-lg p-4"
+                  className="w-14 bg-blue-400 text-white  h-8 mr-2 float-right rounded-lg p-2"
                 />
               </div>
               <div class="input-group input-group-outline pt-5 flex float-left items-center">
-                <label class="form-label text-sm font-semibold">
+                <label class="form-label text-sm mb-4 font-semibold">
                   Enter the number of downspouts:{" "}
                 </label>
                 <input
@@ -249,14 +249,14 @@ export default function Calculator() {
                   id="downSpouts"
                   name="downSpouts"
                   class="form-control"
-                  className="w-14  bg-white h-8float-right rounded-lg ml-2 p-1"
+                  className="w-14  bg-blue-400 text-white h-8 mb-4 float-right rounded-lg ml-2 p-2"
                 />
               </div>
             </div>
           </div>
         </div>
         <div class="grid grid-col-4 m-auto grid-flow-col gap-4 pb-10 justify-center ml-20 mr-20">
-          <div class="shadow-innerShadow col-span-2 m-auto h-auto  bg-backdropLight mr-10 rounded-md drop-shadow-lg">
+          <div class="shadow-lg col-span-2 m-auto h-auto  bg-[#fafafa] mr-10 rounded-3xl drop-shadow-lg">
             <div className="">
               <h3 className="text-center p-5 text-xl">
                 <span className="underline  font-bold">Step 3</span>: Identify
@@ -295,13 +295,13 @@ export default function Calculator() {
                   id="ribbonLength"
                   name="ribbonLength"
                   class="form-control"
-                  className="w-14  bg-white h-8 float-right rounded-lg p-4"
+                  className="w-14  bg-blue-400 text-white  h-8 float-right rounded-lg p-2"
                 />
               </div>
             </div>
           </div>
 
-          <div class="shadow-innerShadow col-span-2 h-auto  bg-backdropLight ml-10 rounded-md drop-shadow-lg">
+          <div class="shadow-lg col-span-2 h-auto  bg-[#fafafa] ml-10 rounded-3xl drop-shadow-lg">
             <div className="">
               <h3 className="text-center p-5 text-xl">
                 <span className="underline font-bold">Step 4</span>: Measure
@@ -329,7 +329,7 @@ export default function Calculator() {
               </ul>
 
               <div class="input-group input-group-outline pt-5 flex float-left items-center">
-                <label class="form-label text-sm font-semibold pr-4">
+                <label class="form-label text-sm mb-4 font-semibold pr-4">
                   Enter the measure slope (degree):
                 </label>
                 <input
@@ -337,7 +337,7 @@ export default function Calculator() {
                   id="slope"
                   name="slope"
                   class="form-control"
-                  className="w-14  bg-white h-8 float-right rounded-lg p-4"
+                  className="w-14  bg-blue-400 text-white h-8 mb-4 float-right rounded-lg p-2"
                 />
               </div>
             </div>
@@ -349,7 +349,7 @@ export default function Calculator() {
             onClick={(e) => {
               runTrueStats();
             }}
-            className=" text-xl bg-backdropLight shadow-lg hover:bg-gray-100 focus:ring-green-300 dark:focus:ring-green-400 font-medium rounded-lg px-5 py-2.5 text-center mr-2 mb-2"
+            className=" text-xl bg-gradient-to-r from-green-300 via-green-500 to-green-400 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-400 font-medium rounded-xl px-5 py-2.5 text-center mr-2 mb-2"
           >
             Calculate
           </button>
@@ -357,7 +357,7 @@ export default function Calculator() {
 
         {/* CALCULATED RESULTS */}
         <div class="w-full h-full flex">
-          <div class={styles.estimations} className="w-3/4 rounded-lg bg-backdropLight shadow-innerShadow m-auto">
+          <div class={styles.estimations} className="w-4/5 rounded-3xl bg-white shadow-lg m-auto">
             <h2 class="text-center font-semibold text-xl mt-6 mb-4">
               {" "}
               Recommended/estimated stats for your rain garden{" "}
@@ -432,7 +432,7 @@ export default function Calculator() {
                   - Surface length (feet):
                   <input
                     class={styles.expInput}
-                    className='bg-white'
+                    className='bg-blue-400 rounded-md drop-shadow-lg p-1 text-xs'
                     ref={expInput.current[0]}
                     type="text"
                     id="expLength"
@@ -446,7 +446,7 @@ export default function Calculator() {
                   - Surface width (feet):
                   <input
                     class={styles.expInput}
-                    className='bg-white'
+                    className='bg-blue-400 rounded-md drop-shadow-lg p-1 text-xs'
                     ref={expInput.current[1]}
                     type="text"
                     id="expWidth"
@@ -460,7 +460,7 @@ export default function Calculator() {
                   - Rainfall per event (inches):
                   <input
                     class={styles.expInput}
-                    className='bg-white'
+                    className='bg-blue-400 rounded-md drop-shadow-lg p-1 text-xs'
                     ref={expInput.current[2]}
                     type="text"
                     id="expRainfall"
@@ -474,7 +474,7 @@ export default function Calculator() {
                   - Downspouts:
                   <input
                     class={styles.expInput}
-                    className='bg-white'
+                    className='bg-blue-400 rounded-md drop-shadow-lg p-1 text-xs'
                     ref={expInput.current[3]}
                     type="text"
                     id="expDownSpouts"
@@ -484,12 +484,12 @@ export default function Calculator() {
                 </label>
 
                 <div class={styles.expRadio}>
-                  <p> - Soil type: </p>
+                  <p className='text-lg'>Soil type: </p>
                   <div>
                     <label className='p-2'>
                       <input
                         class={styles.expInput}
-                        
+                        className='bg-green-300 rounded-md drop-shadow-lg p-1 text-xs'
                         ref={expInput.current[4]}
                         type="radio"
                         id="expSandy"
@@ -529,7 +529,7 @@ export default function Calculator() {
                 </div>
 
                 <div class={styles.expRadio}>
-                  <p> - Slope: </p>
+                  <p className='text-lg'>Slope: </p>
                   <div>
                     <label className='p-2'>
                       <input
@@ -571,10 +571,6 @@ export default function Calculator() {
                     </label>
                   </div>
                 </div>
-                <button type="button" name="resetButton" className='ml-16 bg-primary hover:bg-primaryDark'>
-                  {" "}
-                  Reset{" "}
-                </button>
               </div>
           </div>
         </div>

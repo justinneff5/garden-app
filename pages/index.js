@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Main from './components/Main'
 import Figures from './components/Figures'
 import CardsContainer from './components/CardsContainer' 
+import Footer from './components/Footer'
 
 export default function Home() {
 
@@ -15,6 +16,7 @@ export default function Home() {
           <CardsContainer display={2} />
         </div>
         <Figures />
+        <Footer />
       </div>
   )
 }
