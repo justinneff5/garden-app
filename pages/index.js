@@ -9,7 +9,7 @@ import Main from './Main'
 import Cards from './Cards'
 import Navbar from './Navbar'
 import Calculator from './Calculator'
-
+import PlantInfo from './PlantInfo'
 export default function Home() {
 
   return (
@@ -81,7 +81,9 @@ export default function Home() {
       {/* <Main/> */}
       {/* <Cards/>
        */}
-       <Calculator/>
+       {/* <Calculator/>
+        */}
+        <PlantInfo/>
     </div>
   )
 }

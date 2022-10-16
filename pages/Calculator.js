@@ -7,6 +7,7 @@ import waterPollution from "./assets/images/wpollution.jpg";
 
 export default function Cards() {
     return (
+        
         <div className='w-full h-auto '>
             <div class="grid grid-col-4 m-auto grid-flow-col gap-4 pb-10 justify-center ml-20 mr-20">
                 <div class="col-span-2 m-auto h-auto text-black bg-green-400 mr-10 rounded-xl drop-shadow-lg">
