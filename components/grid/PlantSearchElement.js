@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function PlantSearchElement(props) {
     //console.log(props);
@@ -8,7 +8,7 @@ export default function PlantSearchElement(props) {
         console.log(props.localPlant);
     }
     function makeUrl() {
-        let url = `https://res.cloudinary.com/demo/image/fetch/${props.localPlant.image_link}`
+        let url = `https://res.cloudinary.com/dkecm382m/image/fetch/${props.localPlant.image_link}`
         if (props.localPlant.image_link.startsWith('https://m.media-amazon')) url = props.localPlant.image_link;
         return url;
     }

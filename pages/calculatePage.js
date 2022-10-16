@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import styles from '../styles/homepage.module.css'
 import Calculator from './components/Calculator'
-import Reccomendations from './components/Reccomendations'
+import Recommendations from './components/Recommendations'
 
 export default function calculatePage() {
     return (
@@ -11,7 +11,7 @@ export default function calculatePage() {
             <div className='mb-12'>
             </div>
             <Calculator />
-            <Reccomendations/>
+            <Recommendations/>
             
         </div>
     );
