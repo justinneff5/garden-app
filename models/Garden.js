@@ -1,21 +1,22 @@
 import mongoose from 'mongoose';
 const model_name = 'Garden';
 const { Schema } = mongoose;
-const plantSchema = require('mongoose').model('Plant').schema;
+import PlantIF from '../lib/plant';
 
 const gardenSchema = new Schema({
-    User: {
+    user: {
         type: String
     },
-    Cols: {
+    cols: {
         type: Number,
     },
-    Rows: {
+    rows: {
         type: Number
     },
-    Plants: {
+    plants: {
         //i is the gridbox ind for location
-        type: [plantSchema, i]
+        type: [{ PlantIF }],
+        default: []
     }
     
 });

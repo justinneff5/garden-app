@@ -11,26 +11,35 @@ function Search(props) {
         e.preventDefault();
         setSearched(true);
     }
-    function matchesSearch(file) {
+    function matchesSearch(name) {
+        let nameLoc = name.toLowerCase();
+        let searchLoc = currSearch.toLowerCase();
         for (let i = 0; i < currSearch.length; i++) {
-            if (file.charAt(i) != currSearch.charAt(i)) return false;
+            if (nameLoc.charAt(i) != searchLoc.charAt(i)) return false;
         }
         return true;
+    }
+
+    function select(plant) {
+        props.setName(plant.name);
+        props.setLink(plant.image_link);
+        props.setMoisture(plant.moisture);
+        props.setExposure(plant.exposure);
     }
 
     function filtered() {
         let temp = [];
         let i = 0;
         props.localPlants.forEach((plant) => {
-            if (matchesSearch(plant.Name)) {
-                temp.push(<div key={i} className="w-2/3 h-16 my-0.5">
+            if (matchesSearch(plant.name)) {
+                temp.push(<button key={i} className="w-full h-24 my-1 mx-4 bg-green-100 focus:bg-green-300" onClick={() => select(plant)}>
                     <PlantSearchElement localPlant={plant} />
-                </div>);
+                </button>);
             }
             i++;
         })
         if (temp.length === 0 && searchHelp.charAt(0) != 'N') {
-            setSearchHelp('No plants matched your search');
+            setSearchHelp('No plants matched your search.');
         }
         if (temp.length != 0 && searchHelp.charAt(0) != 'T') {
             setSearchHelp('Try searching for something!')
@@ -42,9 +51,9 @@ function Search(props) {
         let temp = [];
         let i = 0;
         props.localPlants.forEach((plant) => {
-            temp.push(<div key={i} className="w-auto h-20 my-0.5 mx-4">
+            temp.push(<button key={i} className="w-full h-24 my-1 mx-4 bg-green-100 focus:bg-green-300" onClick={() => select(plant)}>
                 <PlantSearchElement localPlant={plant} />
-            </div>);
+            </button>);
             i++;
         });
         return temp;
@@ -59,11 +68,11 @@ function Search(props) {
     return (
         <div className="h-full w-full ml-4 relative z-20 text-black bg-gray-100 overflow-hidden">
             {/* <button onClick={() => search(e.target.value)} className="w-20 h-20 bg-gray-400"> click to load plant</button> */}
-            <div className="">
+            <div className="m-2">
                 <form className="flex sticky">
-                    <input type="text" value={currSearch} className="w-32 h-10 ml-6 mt-8 text-black bg-green-300" onChange={(e) => setCurrSearch(e.target.value)} />
-                    <button type="submit" onClick={(e) => search(e)} className="w-20 h-10 mt-8 ml-4 bg-green-300">Search</button>
-                    <button onClick={ (e) => clearSearch(e)} className="w-16 h-10 mt-8 ml-4 mr-6 bg-green-400">Clear</button>
+                    <input placeholder="Enter plant name" type="text" value={currSearch} className="border-2 border-green-500 pl-2 rounded-md w-48 h-10 ml-6 mt-8 text-black bg-gray-100" onChange={(e) => setCurrSearch(e.target.value)} />
+                    <button type="submit" onClick={(e) => search(e)} className="w-20 rounded-md h-10 mt-8 ml-4 bg-green-300">Search</button>
+                    <button onClick={ (e) => clearSearch(e)} className="w-16 h-10 rounded-md mt-8 ml-4 mr-6 bg-green-400">Clear</button>
                 </form>
                 <div className="ml-12 h-full text-sm w-auto text-right mr-6 mb-4">{searchHelp}</div>
             </div>
