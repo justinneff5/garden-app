@@ -81,9 +81,9 @@ export default function Home() {
       {/* <Main/> */}
       {/* <Cards/>
        */}
-       {/* <Calculator/>
-        */}
-        <PlantInfo/>
+       <Calculator/>
+       
+        {/* <PlantInfo/> */}
     </div>
   )
 }
