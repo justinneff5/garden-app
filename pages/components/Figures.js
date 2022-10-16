@@ -1,4 +1,4 @@
-
+import styles from '/styles/homepage.module.css'
 import dynamic from "next/dynamic";
 
 const Animator = dynamic(
@@ -12,7 +12,7 @@ import { ScrollContainer, ScrollPage, batch, Fade, FadeIn, FadeOut, Move, MoveIn
 export default function Figures(props) {
 
     const SlideLeft = MoveIn(-1000, 0);
-
+    
     return (
         <ScrollContainer>
             {/* <ScrollPage page={0}>
@@ -57,7 +57,7 @@ export default function Figures(props) {
                                 <div class="flex">
                                     <div class="flex p-0 sm:w-full lg:w-full w-full">
                                         <h2 class="font-medium text-2xl">99%</h2>
-                                        <p class="pl-2 pt-1 text-lg leading-relaxed"> of US counties are impacted by Flooding.</p>
+                                        <p class="pl-2 pt-1 text-lg leading-relaxed"> of US counties are impacted by flooding.</p>
                                     </div>
                                 </div>
                             </div>

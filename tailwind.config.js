@@ -19,7 +19,7 @@ const Myclass = plugin(function({addUtilities}){
 
     ".backface-hidden":{
       backfaceVisibility: "hidden"
-    }
+    },
   });
 });
 
@@ -33,6 +33,14 @@ module.exports = {
 
     },
     extend: {
+      keyframes: {
+        slideLeft: {
+          '100%': { left: 0 }
+        }
+      },
+      animation: {
+        slideLeft: 'slideLeft 0.5s forwards'
+      },
       boxShadow: {
         innerShadow: '0 0 100px rgba(0,0,0,0.3) inset',
         innerLess: '0 0 25px rgba(0,0,0,0.3) inset',
